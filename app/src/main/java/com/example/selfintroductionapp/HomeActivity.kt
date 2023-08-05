@@ -7,6 +7,7 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.StyleSpan
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 class HomeActivity : AppCompatActivity() {
@@ -15,8 +16,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val buttonFinish = findViewById<Button>(R.id.homeButtonFinish)
+        val imgViewProfile = findViewById<ImageView>(R.id.homeImageView)
 
         val strDataID = intent.getStringExtra("dataFromSignInActivity")
+        val ranNum = intent.getIntExtra("intFromSignInActivity", 0)
 
         val textViewID = findViewById<TextView>(R.id.homeTextViewID)    //부분 Bold 처리를 위한 텍스트뷰 연동
         val textViewName = findViewById<TextView>(R.id.homeTextViewName)
@@ -51,6 +54,14 @@ class HomeActivity : AppCompatActivity() {
         textViewGreet.text = greetBuilder
 
         textViewID.append(strDataID)
+
+        when (ranNum) { //0~4 중 랜덤한 숫자를 받고 해당 숫자에 대응하는 이미지뷰 출력
+            0 -> imgViewProfile.setImageResource(R.drawable.profile1)
+            1 -> imgViewProfile.setImageResource(R.drawable.profile2)
+            2 -> imgViewProfile.setImageResource(R.drawable.profile3)
+            3 -> imgViewProfile.setImageResource(R.drawable.profile4)
+            4 -> imgViewProfile.setImageResource(R.drawable.profile5)
+        }
 
         buttonFinish.setOnClickListener {
             finish()

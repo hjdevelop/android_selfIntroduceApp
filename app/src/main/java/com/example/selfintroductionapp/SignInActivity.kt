@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import java.util.Random
 
 class SignInActivity : AppCompatActivity() {
 
@@ -16,7 +17,7 @@ class SignInActivity : AppCompatActivity() {
     lateinit var editTextPwd : EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_sign_in)
 
         val btnSignIn = findViewById<Button>(R.id.signInSignInButton)
         val btnSignUp = findViewById<Button>(R.id.signInSignUpButton)
@@ -37,6 +38,9 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this,"로그인 성공", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("dataFromSignInActivity", strDataID)
+                val random = Random()
+                val ranNum = random.nextInt(5)
+                intent.putExtra("intFromSignInActivity", ranNum)
                 startActivity(intent)
             }
         }
