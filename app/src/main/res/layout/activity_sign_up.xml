@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignUpActivity"
+    android:background="#ddeeff">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,86 +20,78 @@
         app:srcCompat="@drawable/profile" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:text="이름"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="아이디"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/signUpEditTextName"
         app:layout_constraintTop_toBottomOf="@+id/signUpEditTextName" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="비밀번호"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/signUpEditTextID"
         app:layout_constraintTop_toBottomOf="@+id/signUpEditTextID" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/signUpEditTextName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:hint="이름을 입력하세요."
         android:inputType="text"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/signUpEditTextID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:inputType="text"
-        android:textSize="20sp"
         android:hint="아이디를 입력하세요."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/signUpEditTextPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:inputType="textPassword"
         android:hint="비밀번호를 입력하세요."
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/signUpSignUpButton"
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:text="회원가입"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        style="@style/button_round"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUpEditTextPwd" />

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInActivity">
+    tools:context=".SignInActivity"
+    android:background="#ddeeff">
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -19,79 +20,79 @@
         android:src="@drawable/logo" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:text="아이디"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/signInEditTextID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
-        android:ems="10"
         android:hint="아이디를 입력하세요."
         android:inputType="text"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:text="비밀번호"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInEditTextID" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/signInEditTextPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:hint="비밀번호를 입력하세요."
         android:inputType="textPassword"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/signInSignInButton"
-        android:layout_width="match_parent"
+        style="@style/button_round"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="50dp"
         android:text="로그인"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInEditTextPwd" />
 
     <Button
         android:id="@+id/signInSignUpButton"
-        android:layout_width="match_parent"
+        style="@style/button_round"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="50dp"
         android:text="회원가입"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInSignInButton" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/signInSignInButton"
+        app:layout_constraintTop_toBottomOf="@+id/signInEditTextPwd" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
