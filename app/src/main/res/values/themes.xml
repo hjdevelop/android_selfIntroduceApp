@@ -22,7 +22,4 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">"@font/nexon</item>
     </style>
-    <style name="button_round">
-        <item name="android:background">@drawable/button_round</item>
-    </style>
 </resources>
