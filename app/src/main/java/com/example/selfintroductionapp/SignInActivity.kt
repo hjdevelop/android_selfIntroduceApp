@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import java.util.Random
+import java.security.SecureRandom
 
 class SignInActivity : AppCompatActivity() {
 
@@ -38,8 +38,8 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this,"로그인 성공", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("dataFromSignInActivity", strDataID)
-                val random = Random()
-                val ranNum = random.nextInt(5)
+                val secureRandom = SecureRandom()
+                val ranNum = secureRandom.nextInt(5)
                 intent.putExtra("intFromSignInActivity", ranNum)
                 startActivity(intent)
             }
